@@ -13,3 +13,4 @@ let web = process.env.WEB || 'No tengo web';
 console.log('Hola ' + nombre); // Hola Sin nombre
 // Imprime la dirección web usando la variable web en la consola
 console.log('Mi web es ' + web); // Mi web es No tengo web
+console.log('Hola');
