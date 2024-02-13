@@ -9,9 +9,9 @@ function router(req, res) {
     // Determinar la ruta solicitada y enviar la respuesta correspondiente
     switch (req.url) {
         case '/hola':
-            res.writeHead(200, {'Content-Type': 'text/plain'}); // Encabezado HTTP con código 200 y tipo de contenido
-            res.write('Hola que tal'); // Escribir el mensaje de respuesta
-            res.end(); // Finalizar la respuesta
+            let saludo =  hola()
+            res.write(saludo)
+            res.end();
             break;
         
         default:
@@ -19,6 +19,10 @@ function router(req, res) {
             res.write('Error 404: No sé qué quieres'); // Mensaje de error para ruta no encontrada
             res.end(); // Finalizar la respuesta
     }
+}
+
+function hola() {
+    return 'Hola que tal'
 }
 
 // Crear un servidor HTTP que utilice la función de enrutamiento y escuche en el puerto 3000
